@@ -31,7 +31,7 @@ function FlyableBox(props) {
         })
     }
 
-    const keepBootom = () => {
+    const keepBottom = () => {
         setStyle({
             position: "",
             marginTop: calculateMargin + "px"
@@ -57,9 +57,11 @@ function FlyableBox(props) {
         currentScrollValue = window.pageYOffset;
 
         if (currentScrollValue > topElHeight) {
-            currentScrollValue > calculateMargin ? keepBootom() : keep();
+            currentScrollValue > calculateMargin ? keepBottom() : keep();
         } else {
             takeOut();
         }
     });
 }
+
+export default FlyableBox;
